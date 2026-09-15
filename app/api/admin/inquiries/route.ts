@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
+
 import { prisma } from "@/lib/prisma";
+
 
 
 export async function GET(){
@@ -18,35 +20,46 @@ createdAt:"desc"
 
 
 
+
+
 const stats={
 
-total: inquiries.length,
+
+total:
+inquiries.length,
+
 
 
 new:
 inquiries.filter(
-(i)=>i.status==="New"
+(i:any)=>i.status==="New"
 ).length,
+
 
 
 contacted:
 inquiries.filter(
-(i)=>i.status==="Contacted"
+(i:any)=>i.status==="Contacted"
 ).length,
+
 
 
 qualified:
 inquiries.filter(
-(i)=>i.status==="Qualified"
+(i:any)=>i.status==="Qualified"
 ).length,
+
 
 
 closed:
 inquiries.filter(
-(i)=>i.status==="Closed"
+(i:any)=>i.status==="Closed"
 ).length,
 
+
 };
+
+
 
 
 
@@ -60,6 +73,7 @@ inquiries
 
 
 }
+
 
 catch(error){
 
