@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+
+  /* Youyang Premium Brand System */
+
+  --space-navy: #041B3A;
+  --navy: #062E62;
+
+  --brand-blue: #0B4F9C;
+  --tech-cyan: #38BDF8;
+
+  --gold: #E7B84B;
+
+  --card-white: #FFFFFF;
+
+  --text-dark: #0F172A;
+  --text-muted: #64748B;
+
+  --border: #E2E8F0;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-space-navy: var(--space-navy);
+  --color-navy: var(--navy);
+
+  --color-brand-blue: var(--brand-blue);
+  --color-tech-cyan: var(--tech-cyan);
+
+  --color-gold: var(--gold);
+
+  --color-card-white: var(--card-white);
+
+  --color-text-dark: var(--text-dark);
+  --color-text-muted: var(--text-muted);
+
+  --color-border: var(--border);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+.input{
+width:100%;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.15);
+border-radius:12px;
+padding:12px;
+color:white;
+outline:none;
 }
