@@ -2,12 +2,24 @@ import { NextResponse } from "next/server";
 
 import { prisma } from "@/lib/prisma";
 
+import { requireRole } from "@/lib/admin-auth";
+
+
+export const dynamic = "force-dynamic";
+
 
 
 export async function GET(){
 
 
 try{
+
+
+await requireRole([
+"ADMIN",
+"STAFF"
+]);
+
 
 
 const inquiries = await prisma.inquiry.findMany({
@@ -22,15 +34,17 @@ createdAt:"desc"
 
 
 
-const stats={
+const stats = {
 
 
 total:
+
 inquiries.length,
 
 
 
 new:
+
 inquiries.filter(
 (i:any)=>i.status==="New"
 ).length,
@@ -38,6 +52,7 @@ inquiries.filter(
 
 
 contacted:
+
 inquiries.filter(
 (i:any)=>i.status==="Contacted"
 ).length,
@@ -45,6 +60,7 @@ inquiries.filter(
 
 
 qualified:
+
 inquiries.filter(
 (i:any)=>i.status==="Qualified"
 ).length,
@@ -52,6 +68,7 @@ inquiries.filter(
 
 
 closed:
+
 inquiries.filter(
 (i:any)=>i.status==="Closed"
 ).length,
@@ -75,23 +92,37 @@ inquiries
 }
 
 
-catch(error){
+
+catch(error:any){
+
+
+if(error.message==="UNAUTHORIZED"){
+
+return NextResponse.json(
+{
+error:"Unauthorized"
+},
+{
+status:401
+}
+);
+
+}
+
 
 
 return NextResponse.json(
-
 {
 error:"Failed"
 },
-
 {
 status:500
 }
-
 );
 
 
 }
+
 
 
 }

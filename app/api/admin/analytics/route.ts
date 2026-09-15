@@ -1,138 +1,212 @@
 import { NextResponse } from "next/server";
 
 import { prisma } from "@/lib/prisma";
+import { requireRole } from "@/lib/admin-auth";
+
+
+export const dynamic = "force-dynamic";
+
 
 
 export async function GET(){
 
 
-  const inquiries = await prisma.inquiry.findMany({
+try{
 
-    orderBy:{
-      createdAt:"desc"
-    }
 
-  });
+await requireRole([
+  "ADMIN",
+  "STAFF"
+]);
 
 
 
-  const total = inquiries.length;
+const inquiries = await prisma.inquiry.findMany({
 
+orderBy:{
+createdAt:"desc"
+}
 
+});
 
-  const status = {
 
 
-    New:
-    inquiries.filter(
-      (i:any)=>i.status==="New"
-    ).length,
 
 
-    Reviewing:
-    inquiries.filter(
-      (i:any)=>i.status==="Reviewing"
-    ).length,
+const total = inquiries.length;
 
 
-    Contacted:
-    inquiries.filter(
-      (i:any)=>i.status==="Contacted"
-    ).length,
 
+const status = {
 
-    Qualified:
-    inquiries.filter(
-      (i:any)=>i.status==="Qualified"
-    ).length,
 
+New:
 
-    Closed:
-    inquiries.filter(
-      (i:any)=>i.status==="Closed"
-    ).length,
+inquiries.filter(
+(i:any)=>i.status==="New"
+).length,
 
 
-  };
 
+Reviewing:
 
+inquiries.filter(
+(i:any)=>i.status==="Reviewing"
+).length,
 
 
 
-  const products:any = {};
+Contacted:
 
+inquiries.filter(
+(i:any)=>i.status==="Contacted"
+).length,
 
 
-  inquiries.forEach(
-    (item:any)=>{
 
+Qualified:
 
-      const product =
-      item.productInterest || "Unknown";
+inquiries.filter(
+(i:any)=>i.status==="Qualified"
+).length,
 
 
-      if(!products[product]){
 
-        products[product]=0;
+Closed:
 
-      }
+inquiries.filter(
+(i:any)=>i.status==="Closed"
+).length,
 
 
-      products[product]++;
+};
 
 
-    }
-  );
 
 
 
+const products:any = {};
 
 
 
-  const countries:any = {};
+inquiries.forEach(
+(item:any)=>{
 
 
+const product =
+item.productInterest || "Unknown";
 
-  inquiries.forEach(
-    (item:any)=>{
 
+if(!products[product]){
 
-      const country =
-      item.country || "Unknown";
+products[product]=0;
 
+}
 
-      if(!countries[country]){
 
-        countries[country]=0;
+products[product]++;
 
-      }
 
+});
 
-      countries[country]++;
 
 
-    }
-  );
 
 
+const countries:any = {};
 
 
 
+inquiries.forEach(
+(item:any)=>{
 
-  return NextResponse.json({
 
-    total,
+const country =
+item.country || "Unknown";
 
-    status,
 
-    products,
+if(!countries[country]){
 
-    countries,
+countries[country]=0;
 
-    recent:
-    inquiries.slice(0,10)
+}
 
-  });
+
+countries[country]++;
+
+
+});
+
+
+
+
+
+return NextResponse.json({
+
+total,
+
+status,
+
+products,
+
+countries,
+
+recent:
+
+inquiries.slice(0,10)
+
+});
+
+
+}
+
+
+
+catch(error:any){
+
+
+if(error.message==="UNAUTHORIZED"){
+
+return NextResponse.json(
+{
+error:"Unauthorized"
+},
+{
+status:401
+}
+);
+
+}
+
+
+
+if(error.message==="FORBIDDEN"){
+
+return NextResponse.json(
+{
+error:"Forbidden"
+},
+{
+status:403
+}
+);
+
+}
+
+
+
+return NextResponse.json(
+{
+error:"Server error"
+},
+{
+status:500
+}
+);
+
+
+}
+
 
 
 }

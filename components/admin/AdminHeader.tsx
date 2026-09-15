@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { signOut } from "next-auth/react";
 
 
 export default function AdminHeader({
@@ -26,6 +27,7 @@ export default function AdminHeader({
       const hour = now.getHours();
 
 
+
       if(hour < 12){
 
         setGreeting("Good Morning");
@@ -43,6 +45,7 @@ export default function AdminHeader({
       }
 
 
+
       setTime(
         now.toLocaleString()
       );
@@ -51,7 +54,9 @@ export default function AdminHeader({
     };
 
 
+
     updateTime();
+
 
 
     const timer = setInterval(
@@ -60,10 +65,14 @@ export default function AdminHeader({
     );
 
 
+
     return ()=>clearInterval(timer);
 
 
+
   },[]);
+
+
 
 
 
@@ -78,7 +87,9 @@ export default function AdminHeader({
     >
 
 
+
       <div>
+
 
 
         <p
@@ -93,6 +104,8 @@ export default function AdminHeader({
           Youyang AI Command Center
 
         </p>
+
+
 
 
 
@@ -111,6 +124,8 @@ export default function AdminHeader({
 
 
 
+
+
         <p
           className="
           mt-3
@@ -123,34 +138,91 @@ export default function AdminHeader({
         </p>
 
 
+
       </div>
+
+
+
 
 
 
       <div
         className="
-        rounded-2xl
-        border
-        border-green-400/30
-        bg-green-400/10
-        px-8
-        py-5
+        flex
+        items-center
+        gap-5
         "
       >
 
-        <p
+
+
+
+        <div
           className="
-          text-green-400
-          font-semibold
+          rounded-2xl
+          border
+          border-green-400/30
+          bg-green-400/10
+          px-8
+          py-5
           "
         >
 
-          ● ALL SYSTEMS ONLINE
+          <p
+            className="
+            text-green-400
+            font-semibold
+            "
+          >
 
-        </p>
+            ● ALL SYSTEMS ONLINE
+
+          </p>
+
+
+        </div>
+
+
+
+
+
+
+        <button
+
+          onClick={()=>
+            signOut({
+              callbackUrl:"/admin/login"
+            })
+          }
+
+          className="
+          rounded-xl
+          border
+          border-red-400/30
+          bg-red-500/10
+          px-6
+          py-4
+          text-red-400
+          font-semibold
+          transition
+          hover:bg-red-500
+          hover:text-white
+          "
+
+        >
+
+          Logout
+
+        </button>
+
+
+
 
 
       </div>
+
+
+
 
 
     </div>
