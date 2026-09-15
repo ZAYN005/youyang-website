@@ -3,153 +3,112 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
 
-export async function GET(){
+export async function GET() {
 
 
-const inquiries =
+  const inquiries = await prisma.inquiry.findMany({
 
-await prisma.inquiry.findMany({
+    orderBy: {
 
-orderBy:{
+      createdAt: "desc"
 
-createdAt:"desc"
+    }
 
-}
+  });
 
-});
 
 
+  const total = inquiries.length;
 
-const total = inquiries.length;
 
 
+  const status = {
 
-const status = {
+    New: inquiries.filter(
+      (i) => i.status === "New"
+    ).length,
 
-New:
 
-inquiries.filter(
+    Reviewing: inquiries.filter(
+      (i) => i.status === "Reviewing"
+    ).length,
 
-(i:any)=>i.status==="New"
 
-).length,
+    Contacted: inquiries.filter(
+      (i) => i.status === "Contacted"
+    ).length,
 
 
-Reviewing:
+    Qualified: inquiries.filter(
+      (i) => i.status === "Qualified"
+    ).length,
 
-inquiries.filter(
 
-(i:any)=>i.status==="Reviewing"
+    Closed: inquiries.filter(
+      (i) => i.status === "Closed"
+    ).length,
 
-).length,
+  };
 
 
-Contacted:
 
-inquiries.filter(
 
-(i:any)=>i.status==="Contacted"
 
-).length,
+  const products: Record<string, number> = {};
 
 
-Qualified:
 
-inquiries.filter(
+  inquiries.forEach((item) => {
 
-(i:any)=>i.status==="Qualified"
 
-).length,
+    const product = item.productInterest || "Unknown";
 
 
-Closed:
+    products[product] = 
+      (products[product] || 0) + 1;
 
-inquiries.filter(
 
-(i:any)=>i.status==="Closed"
+  });
 
-).length,
 
-};
 
 
 
 
+  const countries: Record<string, number> = {};
 
-const products:any = {};
 
 
+  inquiries.forEach((item) => {
 
-inquiries.forEach((item:any)=>{
 
+    const country = item.country || "Unknown";
 
-const product =
 
-item.productInterest || "Unknown";
+    countries[country] =
+      (countries[country] || 0) + 1;
 
 
+  });
 
-if(!products[product]){
 
-products[product]=0;
 
-}
 
 
-products[product]++;
 
+  return NextResponse.json({
 
-});
+    total,
 
+    status,
 
+    products,
 
+    countries,
 
+    recent: inquiries.slice(0,10)
 
-const countries:any = {};
-
-
-
-inquiries.forEach((item:any)=>{
-
-
-const country =
-
-item.country || "Unknown";
-
-
-
-if(!countries[country]){
-
-countries[country]=0;
-
-}
-
-
-countries[country]++;
-
-
-});
-
-
-
-
-
-
-return NextResponse.json({
-
-total,
-
-status,
-
-products,
-
-countries,
-
-recent:
-
-inquiries.slice(0,10)
-
-});
+  });
 
 
 }
