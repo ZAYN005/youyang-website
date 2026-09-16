@@ -1,7 +1,6 @@
 import Hero from "@/components/sections/Hero";
-import Products from "@/components/sections/Products";
 import Technology from "@/components/sections/Technology";
-import Solutions from "@/components/sections/Solutions";
+
 
 export default function Home() {
 
@@ -11,11 +10,7 @@ export default function Home() {
 
       <Hero />
 
-      <Products />
-
       <Technology />
-
-      <Solutions />
 
     </main>
 

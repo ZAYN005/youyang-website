@@ -1,0 +1,825 @@
+{
+  "nav": {
+    "home": "首页",
+    "company": "公司",
+    "products": "产品",
+    "solutions": "解决方案",
+    "resources": "资源",
+    "contact": "联系我们"
+  },
+
+  "common": {
+    "learnMore": "了解更多",
+    "viewProducts": "查看产品",
+    "contactUs": "联系我们"
+  },
+
+
+  "hero": {
+    "label": "智能感知技术",
+    "title": "通过人工智能与光电技术创新智能感知",
+    "description1": "优阳智能控制专注于智能感知系统开发，融合先进成像技术、AI识别算法和精密工程技术。",
+    "description2": "我们的技术为复杂环境和关键应用提供更广范围感知、智能分析和可靠感知能力。"
+  },
+
+
+  "technology": {
+
+    "label": "核心技术",
+
+    "title": "构建智能感知系统",
+
+    "description": "优阳融合光学创新、人工智能计算和智能感知技术，打造下一代广域感知解决方案。",
+
+    "capabilities": "核心技术能力",
+
+
+    "items": {
+
+      "one": {
+
+        "title": "复眼成像技术",
+
+        "description": "受复眼视觉启发的多摄像机光学架构，实现广域全景感知，减少盲区并提升环境感知能力。"
+
+      },
+
+
+      "two": {
+
+        "title": "AI识别算法",
+
+        "description": "先进AI算法实时分析视觉信息，实现智能检测、分类、识别和态势感知。"
+
+      },
+
+
+      "three": {
+
+        "title": "3D图像拼接",
+
+        "description": "高精度图像融合技术将多摄像机画面融合，实现大型区域无缝全景监控。"
+
+      },
+
+
+      "four": {
+
+        "title": "数字孪生建模",
+
+        "description": "数字化技术支持智能监控、环境分析和数据驱动决策。"
+
+      }
+
+    },
+
+
+    "architecture": {
+
+      "label": "智能架构",
+
+      "title": "从感知到智能",
+
+      "description": "融合先进感知硬件、边缘AI计算和智能分析平台，支持复杂应用场景。"
+
+    }
+
+  },
+
+
+  "company": {
+
+    "hero": {
+
+      "label": "关于优阳",
+
+      "title": "面向大范围智能感知的智能视觉系统",
+
+      "description": "优阳智能控制致力于开发先进全景感知和智能监控解决方案，融合光学创新、人工智能计算和智能感知技术。"
+
+    },
+
+
+    "overview": {
+
+      "title": "公司概况",
+
+      "description": "成立于2018年，优阳智能控制专注于复杂监控环境下智能视觉感知系统的研发。通过融合全景成像、AI识别和智能感知技术，为广域感知应用提供先进解决方案。"
+
+    },
+
+
+    "established": "成立时间",
+
+    "year": "2018",
+
+    "establishedDescription": "构建面向下一代视觉应用的智能感知系统。",
+
+
+    "mission": {
+
+      "title": "使命",
+
+      "description": "技术引领发展，创新创造卓越。我们利用先进技术和持续创新，为行业和社会创造价值。"
+
+    },
+
+
+    "vision": {
+
+      "title": "愿景",
+
+      "description": "成为高品质高科技品牌企业，通过先进创新、可靠产品和质量承诺打造值得信赖的科技品牌。"
+
+    },
+
+
+    "values": {
+
+      "title": "价值观",
+
+      "description": "全球视野。持续探索技术进步，为全球应用创造智能解决方案。"
+
+    },
+
+
+    "capabilityTitle": "核心技术能力",
+
+
+    "capabilities": {
+
+      "one": {
+
+        "title": "复眼成像",
+
+        "description": "先进光学架构，实现全景视觉感知和广域监测。"
+
+      },
+
+
+      "two": {
+
+        "title": "AI识别技术",
+
+        "description": "智能算法提供实时识别和态势感知能力。"
+
+      },
+
+
+      "three": {
+
+        "title": "智能感知系统",
+
+        "description": "结合成像、AI计算和智能感知的综合解决方案。"
+
+      }
+
+    },
+
+
+    "cta": {
+
+      "title": "与优阳智能控制合作",
+
+      "description": "探索面向未来应用的智能感知解决方案。",
+
+      "button": "联系我们 →"
+
+    }
+
+  },
+
+
+  "products": {
+
+    "label": "智能感知产品",
+
+    "title": "先进全景智能系统",
+
+    "description": "优阳智能感知平台结合复眼成像技术、边缘AI计算和全景感知能力，为复杂环境提供智能解决方案。",
+
+    "explore": "探索产品",
+
+
+    "sentinel": {
+
+      "name": "360哨兵",
+
+      "description": "基于复眼成像技术的全场景智能监控设备。",
+
+      "hero": {
+
+        "label": "全景智能监控系统",
+
+        "description": "基于复眼成像技术的全场景智能监控系统，实现全景感知与智能识别。",
+
+        "button": "申请演示"
+
+      },
+
+
+      "overview": {
+
+        "title": "产品概述",
+
+        "description": "360 Sentinel融合先进全景成像、AI识别算法和智能感知技术，为复杂监控环境提供大范围感知能力。"
+
+      },
+            "advantages": {
+
+        "title": "核心优势",
+
+        "items": {
+
+          "one": {
+
+            "title": "360°全景感知",
+
+            "description": "通过先进光学架构实现广范围视觉覆盖，减少监控盲区。"
+
+          },
+
+
+          "two": {
+
+            "title": "AI智能识别",
+
+            "description": "利用人工智能算法实现目标检测、分类和实时分析。"
+
+          },
+
+
+          "three": {
+
+            "title": "高效监控能力",
+
+            "description": "通过智能感知和自动分析提升监控效率。"
+
+          },
+
+
+          "four": {
+
+            "title": "灵活应用场景",
+
+            "description": "适用于公共区域和工业环境等需要广域感知的应用。"
+
+          }
+
+        }
+
+      },
+
+    "specifications": {
+
+  "title": "技术参数",
+
+  "parameter": "参数",
+
+  "value": "详情",
+
+  "items": {
+
+    "model": "型号",
+
+    "imaging": "成像技术",
+
+    "ai": "AI能力",
+
+    "application": "应用场景"
+
+  },
+
+  "values": {
+
+    "imaging": "复眼成像技术",
+
+    "ai": "AI智能识别与分析",
+
+    "application": "广域智能监控场景"
+
+  }
+
+},
+
+      "comparison": {
+
+        "title": "传统监控与360 Sentinel对比",
+
+        "traditional": "传统系统",
+
+        "product": "360 Sentinel",
+
+        "items": {
+
+          "one": {
+
+            "traditional": "视角范围有限",
+
+            "sentinel": "广域全景感知"
+
+          },
+
+
+          "two": {
+
+            "traditional": "依赖人工监控",
+
+            "sentinel": "AI智能分析"
+
+          },
+
+
+          "three": {
+
+            "traditional": "需要多个设备",
+
+            "sentinel": "一体化感知系统"
+
+          }
+
+        }
+
+      },
+
+
+      "applications": {
+
+        "title": "应用场景",
+
+        "description": "支持智能监控和感知需求。",
+
+        "items": {
+
+          "street": "城市公共空间",
+
+          "airport": "交通枢纽",
+
+          "port": "关键基础设施",
+
+          "largeArea": "大范围监控"
+
+        }
+
+      },
+
+
+      "cta": {
+
+        "title": "携手优阳智能控制",
+
+        "description": "探索面向未来应用的智能感知解决方案。",
+
+        "button": "联系我们"
+
+      }
+
+    },
+
+
+    "dome": {
+
+      "name": "穹顶监控",
+
+      "description": "具备智能场景感知和AI识别能力的全景监控设备。",
+
+
+      "hero": {
+
+        "label": "智能全景监控系统",
+
+        "description": "面向智能场景感知的全景监控设备，具备边缘AI识别能力。",
+
+        "button": "申请演示"
+
+      },
+
+
+      "overview": {
+
+        "title": "产品概述",
+
+        "description": "Dome Watch结合全景成像技术和AI计算能力，为复杂环境提供智能监控解决方案。"
+
+      },
+
+
+      "advantages": {
+
+        "title": "核心优势",
+
+        "items": {
+
+          "one": {
+
+            "title": "全景监控",
+
+            "description": "通过全景成像技术实现全面视觉感知。"
+
+          },
+
+
+          "two": {
+
+            "title": "AI场景理解",
+
+            "description": "利用智能识别算法分析视觉信息。"
+
+          },
+
+
+          "three": {
+
+            "title": "稳定性能",
+
+            "description": "适用于高要求环境下持续运行。"
+
+          },
+
+
+          "four": {
+
+            "title": "智能集成",
+
+            "description": "支持智能感知和监控平台集成。"
+
+          }
+
+        }
+
+      },
+
+
+      "specifications": {
+
+  "title": "技术参数",
+
+  "parameter": "参数",
+
+  "value": "详情",
+
+  "items": {
+
+    "model": "型号",
+
+    "imaging": "成像技术",
+
+    "ai": "AI能力",
+
+    "application": "应用场景"
+
+  },
+
+  "values": {
+
+    "imaging": "全景成像技术",
+
+    "ai": "边缘AI识别与智能分析",
+
+    "application": "复杂环境智能监控场景"
+
+  }
+
+},
+
+
+      "comparison": {
+
+        "title": "传统监控与Dome Watch对比",
+
+        "traditional": "传统系统",
+
+        "product": "Dome Watch",
+
+        "items": {
+
+          "one": {
+
+            "traditional": "监控范围有限",
+
+            "dome": "全景覆盖"
+
+          },
+         
+
+          "two": {
+
+            "traditional": "基础视频记录",
+
+            "dome": "AI智能分析"
+
+          },
+
+
+          "three": {
+
+            "traditional": "部署复杂度高",
+
+            "dome": "集成化智能方案"
+
+          },
+
+
+          "four": {
+
+            "traditional": "环境感知有限",
+
+            "dome": "增强场景理解"
+
+          }
+
+        }
+
+      },
+
+
+      "applications": {
+
+        "title": "应用场景",
+
+        "description": "满足智能监控应用需求。",
+
+        "items": {
+
+          "security": "安全监控",
+
+          "city": "智慧城市应用",
+
+          "surveillance": "公共监控",
+
+          "industrial": "工业区域"
+
+        }
+
+      },
+
+
+      "cta": {
+
+        "title": "探索Dome Watch解决方案",
+
+        "description": "利用智能感知技术打造更智能的监控系统。",
+
+        "button": "联系我们"
+
+      }
+
+    },
+        "guardian": {
+
+      "name": "广域守护者",
+
+      "description": "融合全景成像、AI识别和智能感知技术的广域感知设备。",
+
+
+      "hero": {
+
+        "label": "广域智能感知系统",
+
+        "description": "融合全景成像、AI识别和智能感知技术的广域态势感知设备。",
+
+        "button": "申请演示"
+
+      },
+
+
+      "overview": {
+
+        "title": "产品概述",
+
+        "description": "Wide-area Guardian通过全景成像和AI分析技术，实现大范围智能感知。"
+
+      },
+
+
+      "advantages": {
+
+        "title": "核心优势",
+
+        "items": {
+
+          "one": {
+
+            "title": "大范围覆盖",
+
+            "description": "适用于大型环境的广域视觉感知。"
+
+          },
+
+
+          "two": {
+
+            "title": "智能分析",
+
+            "description": "利用AI识别技术实现高效信息处理。"
+
+          },
+
+
+          "three": {
+
+            "title": "持续感知",
+
+            "description": "支持复杂场景下可靠感知。"
+
+          },
+
+
+          "four": {
+
+            "title": "规模化应用",
+
+            "description": "适合大型智能监控项目部署。"
+
+          }
+
+        }
+
+      },
+
+
+      "specifications": {
+
+  "title": "技术参数",
+
+  "parameter": "参数",
+
+  "value": "详情",
+
+  "items": {
+
+    "model": "型号",
+
+    "imaging": "成像技术",
+
+    "ai": "AI能力",
+
+    "application": "应用场景"
+
+  },
+
+  "values": {
+
+    "imaging": "大范围全景成像技术",
+
+    "ai": "AI识别与智能感知分析",
+
+    "application": "广域监控与态势感知场景"
+
+  }
+
+      },
+
+
+      "comparison": {
+
+        "title": "传统监控与Wide-area Guardian对比",
+
+        "traditional": "传统系统",
+
+        "product": "Wide-area Guardian",
+
+        "items": {
+
+          "one": {
+
+            "traditional": "监控范围较小",
+
+            "guardian": "广域感知"
+
+          },
+
+
+          "two": {
+
+            "traditional": "分析能力有限",
+
+            "guardian": "AI智能理解"
+
+          },
+
+
+          "three": {
+
+            "traditional": "需要多个系统",
+
+            "guardian": "一体化解决方案"
+
+          },
+
+
+          "four": {
+
+            "traditional": "扩展能力有限",
+
+            "guardian": "灵活部署"
+
+          }
+
+        }
+
+      },
+
+
+      "applications": {
+
+        "title": "应用场景",
+
+        "description": "满足大范围智能感知需求。",
+
+        "items": {
+
+          "city": "智慧城市",
+
+          "infrastructure": "关键基础设施",
+
+          "transportation": "交通系统",
+
+          "safety": "公共安全"
+
+        }
+
+      },
+
+
+      "cta": {
+
+        "title": "携手优阳智能控制",
+
+        "description": "探索先进广域感知解决方案。",
+
+        "button": "联系我们"
+
+      }
+
+    }
+
+  },
+
+
+  "footer": {
+
+    "description": "基于人工智能的全景感知与智能监控解决方案，实现大范围智能感知。",
+
+    "follow": "关注我们",
+
+
+    "company": {
+
+      "title": "公司",
+
+      "about": "关于我们",
+
+      "technology": "技术",
+
+      "rd": "研发能力",
+
+      "partners": "合作伙伴"
+
+    },
+
+
+    "products": {
+
+      "title": "产品",
+
+      "sentinel": "360 Sentinel",
+
+      "dome": "Dome Watch",
+
+      "guardian": "Wide-area Guardian"
+
+    },
+
+
+    "solutions": {
+
+      "title": "解决方案",
+
+      "urban": "城市公共空间",
+
+      "transportation": "交通枢纽",
+
+      "campuses": "校园",
+
+      "healthcare": "医疗健康",
+
+      "security": "高安全场所",
+
+      "industrial": "工业场景"
+
+    },
+
+
+    "contactTitle": "联系我们",
+
+
+    "copyright": "© 2026 Youyang Intelligent Control. 版权所有。",
+
+    "privacy": "隐私政策",
+
+    "terms": "条款"
+
+  }
+
+}

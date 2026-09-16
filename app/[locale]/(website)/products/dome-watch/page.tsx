@@ -1,42 +1,36 @@
 import type { Metadata } from "next";
 
 import Container from "@/components/ui/Container";
-
 import Button from "@/components/ui/Button";
+
+import { getTranslations } from "next-intl/server";
 
 
 
 export const metadata: Metadata = {
 
   title:
-    "Wide-area Guardian | Large-Scale AI Perception System | Youyang Intelligent Control",
+    "Dome Watch | Intelligent Panoramic Monitoring System | Youyang Intelligent Control",
 
   description:
-    "Wide-area Guardian is a large-scale intelligent sensing solution from Youyang Intelligent Control, delivering panoramic imaging, AI-powered perception, and continuous monitoring for complex environments.",
+    "Dome Watch is an intelligent panoramic monitoring system from Youyang Intelligent Control, providing AI-powered scene awareness, visual analysis, and reliable monitoring for complex environments.",
 
 };
 
 
+
 const advantages = [
   {
-    title: "Wide-Area Situation Awareness",
-    description:
-      "Provides large-scale visual awareness through panoramic imaging technology, supporting continuous monitoring of complex environments.",
+    key: "one",
   },
   {
-    title: "AI-Powered Perception",
-    description:
-      "Combines AI recognition algorithms with intelligent sensing technology for real-time analysis and scene understanding.",
+    key: "two",
   },
   {
-    title: "Panoramic Imaging Technology",
-    description:
-      "Uses advanced panoramic imaging capabilities to improve coverage and reduce monitoring blind spots.",
+    key: "three",
   },
   {
-    title: "Intelligent Security Applications",
-    description:
-      "Designed for smart city, public safety, and critical infrastructure environments requiring reliable visual intelligence.",
+    key: "four",
   },
 ];
 
@@ -44,28 +38,30 @@ const advantages = [
 
 const applications = [
   {
-    title: "Smart City Security",
+    key: "security",
     image: "/solutions/street.png",
   },
   {
-    title: "Critical Infrastructure",
+    key: "city",
     image: "/solutions/airport.png",
   },
   {
-    title: "Transportation Environment",
+    key: "surveillance",
     image: "/solutions/port.png",
   },
   {
-    title: "Large Area Public Safety",
+    key: "industrial",
     image: "/solutions/mine.jpg",
   },
 ];
 
 
 
+export default async function DomeWatchPage() {
 
 
-export default function WideAreaGuardianPage() {
+  const t = await getTranslations("products.dome");
+
 
 
   return (
@@ -74,87 +70,68 @@ export default function WideAreaGuardianPage() {
 
 
 
-
       {/* Hero */}
-
 
       <section className="bg-space-navy py-20 text-white">
 
-
         <Container>
-
 
 
           <div className="grid items-center gap-12 lg:grid-cols-2">
 
 
-
             {/* Text */}
-
 
             <div>
 
 
               <p className="text-sm uppercase tracking-[0.3em] text-tech-cyan">
 
-                Wide-Area Intelligent Sensing System
+                {t("hero.label")}
 
               </p>
-
 
 
 
               <h1 className="mt-5 text-5xl font-bold">
 
-                Wide-area Guardian
+                Dome Watch
 
               </h1>
 
 
 
-
               <p className="mt-3 text-lg text-slate-300">
 
-                YYZK-PANO-52L-V1.0
+                YYZK-SkyView-6L-V1.0
 
               </p>
-
 
 
 
 
               <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-300">
 
-
-                A wide-area situation awareness camera
-                integrating panoramic imaging, AI recognition,
-                and intelligent perception technologies for
-                large-scale monitoring environments.
-
+                {t("hero.description")}
 
               </p>
 
 
 
 
-
               <div className="mt-8">
-
 
                 <Button href="/contact">
 
-                  Request Demo →
+                  {t("hero.button")}
 
                 </Button>
-
 
               </div>
 
 
 
             </div>
-
-
 
 
 
@@ -162,29 +139,23 @@ export default function WideAreaGuardianPage() {
 
             {/* Product Image */}
 
-
             <div className="flex justify-center">
-
 
 
               <div className="flex h-[380px] w-[380px] items-center justify-center rounded-3xl bg-white/5 p-10 backdrop-blur">
 
 
-
                 <img
-                  src="/products/wide-area-guardian.jpg"
-                  alt="Wide-area Guardian"
+                  src="/products/dome-watch.png"
+                  alt="Dome Watch"
                   className="h-full w-full object-contain"
                 />
-
 
 
               </div>
 
 
-
             </div>
-
 
 
 
@@ -192,13 +163,9 @@ export default function WideAreaGuardianPage() {
 
 
 
-
         </Container>
 
-
-
       </section>
-
 
 
 
@@ -208,37 +175,26 @@ export default function WideAreaGuardianPage() {
 
       {/* Overview */}
 
-
       <section className="py-20">
 
 
         <Container>
 
 
-
           <h2 className="text-3xl font-bold text-navy">
 
-            Product Overview
+            {t("overview.title")}
 
           </h2>
 
 
 
 
-
           <p className="mt-6 max-w-4xl text-lg leading-relaxed text-text-muted">
 
-
-            Wide-area Guardian is an intelligent vision
-            system developed for large-area perception
-            scenarios. By combining panoramic imaging,
-            AI recognition, and intelligent sensing
-            technologies, it delivers comprehensive
-            situation awareness and monitoring capability.
-
+            {t("overview.description")}
 
           </p>
-
 
 
 
@@ -246,7 +202,6 @@ export default function WideAreaGuardianPage() {
 
 
       </section>
-
 
 
 
@@ -256,7 +211,6 @@ export default function WideAreaGuardianPage() {
 
       {/* Advantages */}
 
-
       <section className="bg-gray-bg py-20">
 
 
@@ -264,13 +218,11 @@ export default function WideAreaGuardianPage() {
 
 
 
-
           <h2 className="text-3xl font-bold text-navy">
 
-            Core Advantages
+            {t("advantages.title")}
 
           </h2>
-
 
 
 
@@ -279,33 +231,26 @@ export default function WideAreaGuardianPage() {
 
 
 
-
-
             {advantages.map((item) => (
 
 
-
               <div
-                key={item.title}
+                key={item.key}
                 className="rounded-2xl bg-white p-8 shadow-sm"
               >
 
 
-
-
                 <h3 className="text-xl font-bold text-navy">
 
-                  {item.title}
+                  {t(`advantages.items.${item.key}.title`)}
 
                 </h3>
 
 
 
-
-
                 <p className="mt-4 text-text-muted">
 
-                  {item.description}
+                  {t(`advantages.items.${item.key}.description`)}
 
                 </p>
 
@@ -314,9 +259,7 @@ export default function WideAreaGuardianPage() {
               </div>
 
 
-
             ))}
-
 
 
 
@@ -324,12 +267,11 @@ export default function WideAreaGuardianPage() {
 
 
 
-
         </Container>
 
 
-
       </section>
+
             {/* Technical Specifications */}
 
       <section className="py-20">
@@ -339,10 +281,9 @@ export default function WideAreaGuardianPage() {
 
           <h2 className="text-3xl font-bold text-navy">
 
-            Technical Specifications
+            {t("specifications.title")}
 
           </h2>
-
 
 
 
@@ -353,12 +294,12 @@ export default function WideAreaGuardianPage() {
 
 
               <p>
-                Parameter
+                {t("specifications.parameter")}
               </p>
 
 
               <p>
-                Specification
+                {t("specifications.value")}
               </p>
 
 
@@ -368,57 +309,47 @@ export default function WideAreaGuardianPage() {
 
 
 
-            {[
-              {
-                parameter: "Product Model",
-                value: "YYZK-PANO-52L-V1.0",
-              },
-              {
-                parameter: "Imaging Technology",
-                value: "Panoramic imaging technology",
-              },
-              {
-                parameter: "AI Capability",
-                value: "AI recognition and intelligent perception",
-              },
-              {
-                parameter: "Application",
-                value: "Large-area intelligent monitoring scenarios",
-              },
-            ].map((item) => (
+         {[
+  {
+    parameter: "model",
+    value: "YYZK-SkyView-6L-V1.0",
+  },
+  {
+    parameter: "imaging",
+    value: t("specifications.values.imaging"),
+  },
+  {
+    parameter: "ai",
+    value: t("specifications.values.ai"),
+  },
+  {
+    parameter: "application",
+    value: t("specifications.values.application"),
+  },
+].map((item) => (
+
+<div
+ key={item.parameter}
+ className="grid grid-cols-2 border-t p-5 text-sm"
+>
+
+<p className="text-text-muted">
+ {t(`specifications.items.${item.parameter}`)}
+</p>
 
 
-              <div
-                key={item.parameter}
-                className="grid grid-cols-2 border-t p-5 text-sm"
-              >
+<p className="font-medium text-navy">
+ {item.value}
+</p>
 
 
-                <p className="text-text-muted">
+</div>
 
-                  {item.parameter}
-
-                </p>
-
-
-
-                <p className="font-medium text-navy">
-
-                  {item.value}
-
-                </p>
-
-
-
-              </div>
-
-
-            ))}
+))}
 
 
 
           </div>
-
 
 
         </Container>
@@ -434,7 +365,6 @@ export default function WideAreaGuardianPage() {
 
       {/* Comparison */}
 
-
       <section className="bg-gray-bg py-20">
 
 
@@ -444,10 +374,9 @@ export default function WideAreaGuardianPage() {
 
           <h2 className="text-3xl font-bold text-navy">
 
-            Traditional Monitoring vs Wide-area Guardian
+            {t("comparison.title")}
 
           </h2>
-
 
 
 
@@ -456,17 +385,20 @@ export default function WideAreaGuardianPage() {
           <div className="mt-10 overflow-hidden rounded-2xl border bg-white">
 
 
-
             <div className="grid grid-cols-2 bg-navy p-5 text-white">
 
 
               <p>
-                Traditional Solutions
+
+                {t("comparison.traditional")}
+
               </p>
 
 
               <p>
-                Wide-area Guardian
+
+                {t("comparison.product")}
+
               </p>
 
 
@@ -476,60 +408,44 @@ export default function WideAreaGuardianPage() {
 
 
 
-
             {[
               {
-                traditional:
-                  "Limited monitoring range requiring multiple cameras",
-                guardian:
-                  "Wide-area panoramic perception with expanded coverage",
+                key: "one",
               },
               {
-                traditional:
-                  "Basic video monitoring without intelligent analysis",
-                guardian:
-                  "AI recognition and intelligent situation awareness",
+                key: "two",
               },
               {
-                traditional:
-                  "Difficult to monitor large and complex areas",
-                guardian:
-                  "Designed for large-scale intelligent monitoring scenarios",
+                key: "three",
               },
               {
-                traditional:
-                  "Higher deployment complexity",
-                guardian:
-                  "Integrated panoramic sensing solution",
+                key: "four",
               },
             ].map((item) => (
 
 
-
               <div
-                key={item.traditional}
+                key={item.key}
                 className="grid grid-cols-2 border-t p-5 text-sm"
               >
 
 
                 <p className="text-text-muted">
 
-                  {item.traditional}
+                  {t(`comparison.items.${item.key}.traditional`)}
 
                 </p>
-
 
 
 
                 <p className="font-medium text-navy">
 
-                  {item.guardian}
+                  {t(`comparison.items.${item.key}.dome`)}
 
                 </p>
 
 
               </div>
-
 
 
             ))}
@@ -540,12 +456,10 @@ export default function WideAreaGuardianPage() {
 
 
 
-
         </Container>
 
 
       </section>
-
 
 
 
@@ -555,7 +469,6 @@ export default function WideAreaGuardianPage() {
 
       {/* Application Scenarios */}
 
-
       <section className="py-20">
 
 
@@ -563,13 +476,11 @@ export default function WideAreaGuardianPage() {
 
 
 
-
           <h2 className="text-3xl font-bold text-navy">
 
-            Application Scenarios
+            {t("applications.title")}
 
           </h2>
-
 
 
 
@@ -579,60 +490,47 @@ export default function WideAreaGuardianPage() {
 
 
 
-
-
             {applications.map((item) => (
 
 
 
               <div
-                key={item.title}
+                key={item.key}
                 className="overflow-hidden rounded-2xl bg-white shadow-sm"
               >
 
 
 
-
                 <img
                   src={item.image}
-                  alt={item.title}
+                  alt={t(`applications.items.${item.key}`)}
                   className="h-56 w-full object-cover"
                 />
-
-
 
 
 
                 <div className="p-6">
 
 
-
                   <h3 className="text-xl font-bold text-navy">
 
-                    {item.title}
+                    {t(`applications.items.${item.key}`)}
 
                   </h3>
 
 
-
-
                   <p className="mt-3 text-text-muted">
 
-                    Intelligent wide-area sensing solutions
-                    for complex monitoring environments.
+                    {t("applications.description")}
 
                   </p>
-
-
 
 
                 </div>
 
 
 
-
               </div>
-
 
 
             ))}
@@ -643,13 +541,10 @@ export default function WideAreaGuardianPage() {
 
 
 
-
-
         </Container>
 
 
       </section>
-
 
 
 
@@ -660,7 +555,6 @@ export default function WideAreaGuardianPage() {
 
       {/* CTA */}
 
-
       <section className="py-20">
 
 
@@ -668,31 +562,24 @@ export default function WideAreaGuardianPage() {
 
 
 
-
           <div className="rounded-3xl bg-navy p-10 text-white">
-
-
 
 
 
             <h2 className="text-3xl font-bold">
 
-              Intelligent Wide-Area Protection
+              {t("cta.title")}
 
             </h2>
 
 
 
 
-
             <p className="mt-4 text-slate-300">
 
-              Deploy advanced visual intelligence
-              solutions for complex monitoring needs.
+              {t("cta.description")}
 
             </p>
-
-
 
 
 
@@ -700,22 +587,18 @@ export default function WideAreaGuardianPage() {
             <div className="mt-6">
 
 
-
               <Button href="/contact">
 
-                Contact Us →
+                {t("cta.button")}
 
               </Button>
-
 
 
             </div>
 
 
 
-
           </div>
-
 
 
 

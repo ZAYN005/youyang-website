@@ -92,7 +92,7 @@ mt-10
 
 {
 
-Object.entries(data.status)
+Object.entries(data.status || {})
 .map(
 ([key,value]:any)=>(
 

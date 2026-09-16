@@ -74,6 +74,7 @@ headers:{
 
 "Content-Type":"application/json"
 
+
 },
 
 body:JSON.stringify({
@@ -219,7 +220,7 @@ Loading CRM...
 
 
 
-const filtered = data.inquiries.filter(
+const filtered = (data.inquiries || []).filter(
 
 (item:any)=>
 

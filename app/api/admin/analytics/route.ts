@@ -16,7 +16,7 @@ try{
 
 await requireRole([
   "ADMIN",
-  "STAFF"
+  "MANAGER"
 ]);
 
 

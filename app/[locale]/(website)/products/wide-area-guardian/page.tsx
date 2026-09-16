@@ -3,38 +3,34 @@ import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 
+import { getTranslations } from "next-intl/server";
+
 
 
 export const metadata: Metadata = {
 
   title:
-    "Dome Watch | Intelligent Panoramic Monitoring System | Youyang Intelligent Control",
+    "Wide-area Guardian | Large-Scale AI Perception System | Youyang Intelligent Control",
 
   description:
-    "Dome Watch is an intelligent panoramic monitoring system from Youyang Intelligent Control, providing AI-powered scene awareness, visual analysis, and reliable monitoring for complex environments.",
+    "Wide-area Guardian is a large-scale intelligent sensing solution from Youyang Intelligent Control, delivering panoramic imaging, AI-powered perception, and continuous monitoring for complex environments.",
 
 };
 
+
+
 const advantages = [
   {
-    title: "Panoramic Monitoring",
-    description:
-      "Provides wide-area visual monitoring through panoramic imaging technology, enabling comprehensive scene awareness.",
+    key: "one",
   },
   {
-    title: "Edge AI Recognition",
-    description:
-      "Integrated AI algorithms support intelligent target recognition, analysis, and real-time monitoring.",
+    key: "two",
   },
   {
-    title: "Intelligent Scene Awareness",
-    description:
-      "Designed to understand complex environments and improve monitoring efficiency through intelligent perception.",
+    key: "three",
   },
   {
-    title: "Flexible Platform Integration",
-    description:
-      "Supports remote preview, configuration, playback, and integration with intelligent management platforms.",
+    key: "four",
   },
 ];
 
@@ -42,26 +38,33 @@ const advantages = [
 
 const applications = [
   {
-    title: "Public Security Monitoring",
+    key: "city",
     image: "/solutions/street.png",
   },
   {
-    title: "Smart City Environment",
+    key: "infrastructure",
     image: "/solutions/airport.png",
   },
   {
-    title: "Large Area Surveillance",
+    key: "transportation",
     image: "/solutions/port.png",
   },
   {
-    title: "Industrial Monitoring",
+    key: "safety",
     image: "/solutions/mine.jpg",
   },
 ];
 
 
 
-export default function DomeWatchPage() {
+
+
+export default async function WideAreaGuardianPage() {
+
+
+  const t = await getTranslations("products.guardian");
+
+
 
   return (
 
@@ -69,63 +72,86 @@ export default function DomeWatchPage() {
 
 
 
+
       {/* Hero */}
+
 
       <section className="bg-space-navy py-20 text-white">
 
+
         <Container>
+
 
 
           <div className="grid items-center gap-12 lg:grid-cols-2">
 
 
+
             {/* Text */}
+
 
             <div>
 
 
               <p className="text-sm uppercase tracking-[0.3em] text-tech-cyan">
-                Intelligent Monitoring System
+
+                {t("hero.label")}
+
               </p>
+
 
 
 
               <h1 className="mt-5 text-5xl font-bold">
-                Dome Watch
+
+                Wide-area Guardian
+
               </h1>
 
 
 
+
               <p className="mt-3 text-lg text-slate-300">
-                YYZK-SkyView-6L-V1.0
+
+                YYZK-PANO-52L-V1.0
+
               </p>
+
 
 
 
 
               <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-300">
 
-                A panoramic monitoring camera designed for
-                intelligent scene awareness, combining
-                advanced imaging technology and edge AI
-                recognition capabilities.
+
+                {t("hero.description")}
+
 
               </p>
 
 
 
 
+
               <div className="mt-8">
 
+
                 <Button href="/contact">
-                  Request Demo →
+
+
+                  {t("hero.button")}
+
+
                 </Button>
+
 
               </div>
 
 
 
             </div>
+
+
 
 
 
@@ -133,23 +159,29 @@ export default function DomeWatchPage() {
 
             {/* Product Image */}
 
+
             <div className="flex justify-center">
+
 
 
               <div className="flex h-[380px] w-[380px] items-center justify-center rounded-3xl bg-white/5 p-10 backdrop-blur">
 
 
+
                 <img
-                  src="/products/dome-watch.png"
-                  alt="Dome Watch"
+                  src="/products/wide-area-guardian.jpg"
+                  alt="Wide-area Guardian"
                   className="h-full w-full object-contain"
                 />
+
 
 
               </div>
 
 
+
             </div>
+
 
 
 
@@ -157,9 +189,13 @@ export default function DomeWatchPage() {
 
 
 
+
         </Container>
 
+
+
       </section>
+
 
 
 
@@ -169,15 +205,20 @@ export default function DomeWatchPage() {
 
       {/* Overview */}
 
+
       <section className="py-20">
 
 
         <Container>
 
 
+
           <h2 className="text-3xl font-bold text-navy">
-            Product Overview
+
+            {t("overview.title")}
+
           </h2>
+
 
 
 
@@ -185,15 +226,11 @@ export default function DomeWatchPage() {
           <p className="mt-6 max-w-4xl text-lg leading-relaxed text-text-muted">
 
 
-            Dome Watch is an intelligent panoramic monitoring
-            system developed for complex surveillance
-            environments. It combines panoramic imaging,
-            AI recognition, and intelligent perception
-            technologies to provide efficient monitoring
-            and situation awareness.
+            {t("overview.description")}
 
 
           </p>
+
 
 
 
@@ -201,6 +238,7 @@ export default function DomeWatchPage() {
 
 
       </section>
+
 
 
 
@@ -210,6 +248,7 @@ export default function DomeWatchPage() {
 
       {/* Advantages */}
 
+
       <section className="bg-gray-bg py-20">
 
 
@@ -217,9 +256,13 @@ export default function DomeWatchPage() {
 
 
 
+
           <h2 className="text-3xl font-bold text-navy">
-            Core Advantages
+
+            {t("advantages.title")}
+
           </h2>
+
 
 
 
@@ -228,26 +271,33 @@ export default function DomeWatchPage() {
 
 
 
+
+
             {advantages.map((item) => (
 
 
+
               <div
-                key={item.title}
+                key={item.key}
                 className="rounded-2xl bg-white p-8 shadow-sm"
               >
 
 
+
+
                 <h3 className="text-xl font-bold text-navy">
 
-                  {item.title}
+                  {t(`advantages.items.${item.key}.title`)}
 
                 </h3>
 
 
 
+
+
                 <p className="mt-4 text-text-muted">
 
-                  {item.description}
+                  {t(`advantages.items.${item.key}.description`)}
 
                 </p>
 
@@ -256,7 +306,9 @@ export default function DomeWatchPage() {
               </div>
 
 
+
             ))}
+
 
 
 
@@ -264,74 +316,101 @@ export default function DomeWatchPage() {
 
 
 
+
         </Container>
 
 
+
       </section>
+
             {/* Technical Specifications */}
 
+
       <section className="py-20">
+
 
         <Container>
 
 
+
           <h2 className="text-3xl font-bold text-navy">
 
-            Technical Specifications
+            {t("specifications.title")}
 
           </h2>
+
+
 
 
 
           <div className="mt-10 overflow-hidden rounded-2xl border bg-white">
 
 
-
             <div className="grid grid-cols-2 bg-navy p-5 text-white">
 
+
               <p>
-                Parameter
+
+                {t("specifications.parameter")}
+
               </p>
 
 
+
               <p>
-                Specification
+
+                {t("specifications.value")}
+
               </p>
+
+
 
             </div>
 
 
 
 
+
+
+
             {[
-              {
-                parameter: "Product Model",
-                value: "YYZK-SkyView-6L-V1.0",
-              },
-              {
-                parameter: "Imaging Technology",
-                value: "Panoramic imaging technology",
-              },
-              {
-                parameter: "AI Capability",
-                value: "Edge AI recognition and intelligent analysis",
-              },
-              {
-                parameter: "Application",
-                value: "Complex monitoring and intelligent sensing scenarios",
-              },
-            ].map((item) => (
+  {
+    parameter: "model",
+    value: "YYZK-PANO-52L-V1.0",
+  },
+
+  {
+    parameter: "imaging",
+    value: t("specifications.values.imaging"),
+  },
+
+  {
+    parameter: "ai",
+    value: t("specifications.values.ai"),
+  },
+
+  {
+    parameter: "application",
+    value: t("specifications.values.application"),
+  },
+
+].map((item) => (
+
+
 
               <div
                 key={item.parameter}
                 className="grid grid-cols-2 border-t p-5 text-sm"
               >
 
+
+
                 <p className="text-text-muted">
 
-                  {item.parameter}
+                  {t(`specifications.items.${item.parameter}`)}
 
                 </p>
+
 
 
 
@@ -342,19 +421,27 @@ export default function DomeWatchPage() {
                 </p>
 
 
+
+
               </div>
 
+
+
             ))}
+
 
 
 
           </div>
 
 
+
         </Container>
 
 
       </section>
+
+
 
 
 
@@ -364,6 +451,8 @@ export default function DomeWatchPage() {
 
       {/* Comparison */}
 
+
+
       <section className="bg-gray-bg py-20">
 
 
@@ -371,11 +460,15 @@ export default function DomeWatchPage() {
 
 
 
+
           <h2 className="text-3xl font-bold text-navy">
 
-            Traditional Monitoring vs Dome Watch
+            {t("comparison.title")}
 
           </h2>
+
+
+
 
 
 
@@ -384,17 +477,26 @@ export default function DomeWatchPage() {
           <div className="mt-10 overflow-hidden rounded-2xl border bg-white">
 
 
+
             <div className="grid grid-cols-2 bg-navy p-5 text-white">
 
 
               <p>
-                Traditional Solutions
+
+                {t("comparison.traditional")}
+
               </p>
+
+
 
 
               <p>
-                Dome Watch
+
+                {t("comparison.product")}
+
               </p>
+
+
 
 
             </div>
@@ -403,56 +505,55 @@ export default function DomeWatchPage() {
 
 
 
+
+
             {[
               {
-                traditional:
-                  "Requires multiple monitoring devices for wider coverage",
-                dome:
-                  "Panoramic monitoring capability with improved scene coverage",
+                key: "one",
               },
               {
-                traditional:
-                  "Limited intelligent analysis capability",
-                dome:
-                  "Built-in AI recognition for intelligent perception",
+                key: "two",
               },
               {
-                traditional:
-                  "Higher dependence on backend processing",
-                dome:
-                  "Edge AI computing reduces response delay",
+                key: "three",
               },
               {
-                traditional:
-                  "Complex monitoring management",
-                dome:
-                  "Integrated intelligent monitoring solution",
+                key: "four",
               },
+
             ].map((item) => (
 
 
+
               <div
-                key={item.traditional}
+                key={item.key}
                 className="grid grid-cols-2 border-t p-5 text-sm"
               >
 
 
+
+
                 <p className="text-text-muted">
 
-                  {item.traditional}
+                  {t(`comparison.items.${item.key}.traditional`)}
 
                 </p>
+
+
 
 
 
                 <p className="font-medium text-navy">
 
-                  {item.dome}
+                  {t(`comparison.items.${item.key}.guardian`)}
 
                 </p>
 
 
+
+
               </div>
+
 
 
             ))}
@@ -463,10 +564,15 @@ export default function DomeWatchPage() {
 
 
 
+
+
         </Container>
 
 
+
       </section>
+
+
 
 
 
@@ -476,6 +582,8 @@ export default function DomeWatchPage() {
 
       {/* Application Scenarios */}
 
+
+
       <section className="py-20">
 
 
@@ -483,11 +591,14 @@ export default function DomeWatchPage() {
 
 
 
+
           <h2 className="text-3xl font-bold text-navy">
 
-            Application Scenarios
+            {t("applications.title")}
 
           </h2>
+
+
 
 
 
@@ -497,51 +608,77 @@ export default function DomeWatchPage() {
 
 
 
+
+
+
             {applications.map((item) => (
 
 
 
+
               <div
-                key={item.title}
+                key={item.key}
                 className="overflow-hidden rounded-2xl bg-white shadow-sm"
               >
 
 
 
+
+
                 <img
+
                   src={item.image}
-                  alt={item.title}
+
+                  alt={t(`applications.items.${item.key}`)}
+
                   className="h-56 w-full object-cover"
+
                 />
+
+
+
 
 
 
                 <div className="p-6">
 
 
+
                   <h3 className="text-xl font-bold text-navy">
 
-                    {item.title}
+                    {t(`applications.items.${item.key}`)}
 
                   </h3>
 
 
+
+
+
                   <p className="mt-3 text-text-muted">
 
-                    Intelligent monitoring solutions for
-                    complex environments.
+                    {t("applications.description")}
 
                   </p>
+
+
+
 
 
                 </div>
 
 
 
+
+
               </div>
 
 
+
+
+
             ))}
+
+
 
 
 
@@ -549,10 +686,14 @@ export default function DomeWatchPage() {
 
 
 
+
+
         </Container>
 
 
+
       </section>
+
 
 
 
@@ -563,6 +704,8 @@ export default function DomeWatchPage() {
 
       {/* CTA */}
 
+
+
       <section className="py-20">
 
 
@@ -570,25 +713,32 @@ export default function DomeWatchPage() {
 
 
 
+
           <div className="rounded-3xl bg-navy p-10 text-white">
+
+
 
 
 
             <h2 className="text-3xl font-bold">
 
-              Intelligent Monitoring For Complex Environments
+              {t("cta.title")}
 
             </h2>
 
 
 
 
+
+
             <p className="mt-4 text-slate-300">
 
-              Discover how Dome Watch improves visual
-              awareness and intelligent surveillance.
+              {t("cta.description")}
 
             </p>
+
+
+
 
 
 
@@ -598,7 +748,9 @@ export default function DomeWatchPage() {
 
               <Button href="/contact">
 
-                Contact Us →
+
+                {t("cta.button")}
+
 
               </Button>
 
@@ -607,18 +759,27 @@ export default function DomeWatchPage() {
 
 
 
+
+
           </div>
+
+
 
 
 
         </Container>
 
 
+
       </section>
+
+
+
 
 
 
     </main>
 
   );
+
 }

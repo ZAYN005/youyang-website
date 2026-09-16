@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
+
 import { siteConfig } from "@/config/site";
 
 import {
@@ -9,6 +13,10 @@ import {
 
 
 export default function Footer() {
+
+  const locale = useLocale();
+
+  const t = useTranslations("footer");
 
 
   return (
@@ -29,7 +37,7 @@ export default function Footer() {
 
 
             <Link
-              href="/"
+              href={`/${locale}`}
               className="flex items-center gap-3"
             >
 
@@ -52,6 +60,7 @@ export default function Footer() {
 
               </div>
 
+
             </Link>
 
 
@@ -59,9 +68,7 @@ export default function Footer() {
 
             <p className="mt-5 max-w-sm leading-relaxed text-slate-300">
 
-              AI-powered panoramic sensing and
-              intelligent surveillance solutions
-              for wide-area perception.
+              {t("description")}
 
             </p>
 
@@ -74,7 +81,9 @@ export default function Footer() {
 
 
               <p className="text-sm font-semibold">
-                Follow Us
+
+                {t("follow")}
+
               </p>
 
 
@@ -82,12 +91,13 @@ export default function Footer() {
               <div className="mt-4 flex items-center gap-5 text-xl text-slate-300">
 
 
-
                 <Link
                   href="#"
                   className="transition hover:text-white"
                 >
+
                   <FaLinkedinIn />
+
                 </Link>
 
 
@@ -96,16 +106,16 @@ export default function Footer() {
                   href="#"
                   className="transition hover:text-white"
                 >
+
                   <FaYoutube />
+
                 </Link>
 
 
-              {/* WeChat Placeholder */}
 
-              <FaWeixin
-              className="cursor-pointer transition hover:text-white"
-              />
-
+                <FaWeixin
+                  className="cursor-pointer transition hover:text-white"
+                />
 
 
               </div>
@@ -120,41 +130,59 @@ export default function Footer() {
 
 
 
-
           {/* Company */}
+
 
           <div>
 
 
             <h3 className="font-semibold">
-              Company
+
+              {t("company.title")}
+
             </h3>
+
 
 
             <ul className="mt-5 space-y-3 text-sm text-slate-300">
 
 
               <li>
-                <Link href="/company">
-                  About
+
+                <Link href={`/${locale}/company`}>
+
+                  {t("company.about")}
+
                 </Link>
+
               </li>
 
 
+
               <li>
-                <Link href="/company/technology">
-                  Technology
+
+                <Link href={`/${locale}/company/technology`}>
+
+                  {t("company.technology")}
+
                 </Link>
+
               </li>
 
 
+
               <li>
-                R&D Capability
+
+                {t("company.rd")}
+
               </li>
 
 
+
               <li>
-                Partners
+
+                {t("company.partners")}
+
               </li>
 
 
@@ -170,35 +198,53 @@ export default function Footer() {
 
           {/* Products */}
 
+
           <div>
 
 
             <h3 className="font-semibold">
-              Products
+
+              {t("products.title")}
+
             </h3>
+
 
 
             <ul className="mt-5 space-y-3 text-sm text-slate-300">
 
 
               <li>
-                <Link href="/products/360-sentinel">
-                  360 Sentinel
+
+                <Link href={`/${locale}/products/360-sentinel`}>
+
+                  {t("products.sentinel")}
+
                 </Link>
+
               </li>
 
 
+
               <li>
-                <Link href="/products/dome-watch">
-                  Dome Watch
+
+                <Link href={`/${locale}/products/dome-watch`}>
+
+                  {t("products.dome")}
+
                 </Link>
+
               </li>
 
 
+
               <li>
-                <Link href="/products/wide-area-guardian">
-                  Wide-area Guardian
+
+                <Link href={`/${locale}/products/wide-area-guardian`}>
+
+                  {t("products.guardian")}
+
                 </Link>
+
               </li>
 
 
@@ -214,12 +260,16 @@ export default function Footer() {
 
           {/* Solutions */}
 
+
           <div>
 
 
             <h3 className="font-semibold">
-              Solutions
+
+              {t("solutions.title")}
+
             </h3>
+
 
 
 
@@ -227,44 +277,78 @@ export default function Footer() {
 
 
               <li>
-                <Link href="/solutions/urban-public-spaces">
-                  Urban Public Spaces
+
+                <Link href={`/${locale}/solutions/urban-public-spaces`}>
+
+                  {t("solutions.urban")}
+
                 </Link>
+
               </li>
 
 
+
+
               <li>
-                <Link href="/solutions/transportation-hubs-critical-sites">
-                  Transportation Hubs
+
+                <Link href={`/${locale}/solutions/transportation-hubs-critical-sites`}>
+
+                  {t("solutions.transportation")}
+
                 </Link>
+
               </li>
 
 
+
+
               <li>
-                <Link href="/solutions/campuses-educational-institutions">
-                  Campuses
+
+                <Link href={`/${locale}/solutions/campuses-educational-institutions`}>
+
+                  {t("solutions.campuses")}
+
                 </Link>
+
               </li>
 
 
+
+
               <li>
-                <Link href="/solutions/healthcare-senior-care">
-                  Healthcare
+
+                <Link href={`/${locale}/solutions/healthcare-senior-care`}>
+
+                  {t("solutions.healthcare")}
+
                 </Link>
+
               </li>
 
 
+
+
               <li>
-                <Link href="/solutions/high-security-facilities">
-                  High-Security
+
+                <Link href={`/${locale}/solutions/high-security-facilities`}>
+
+                  {t("solutions.security")}
+
                 </Link>
+
               </li>
 
 
+
+
               <li>
-                <Link href="/solutions/commercial-industrial-worksites">
-                  Industrial
+
+                <Link href={`/${locale}/solutions/commercial-industrial-worksites`}>
+
+                  {t("solutions.industrial")}
+
                 </Link>
+
               </li>
 
 
@@ -280,29 +364,41 @@ export default function Footer() {
 
           {/* Contact */}
 
+
           <div>
 
 
             <h3 className="font-semibold">
-              Contact
+
+              {t("contactTitle")}
+
             </h3>
+
 
 
             <ul className="mt-5 space-y-3 text-sm text-slate-300">
 
 
               <li>
+
                 📞 {siteConfig.contact.phone}
+
               </li>
+
 
 
               <li>
+
                 ✉ {siteConfig.contact.email}
+
               </li>
 
 
+
               <li className="leading-relaxed">
+
                 {siteConfig.contact.address}
+
               </li>
 
 
@@ -323,6 +419,7 @@ export default function Footer() {
 
         {/* Bottom */}
 
+
         <div
           className="
           mt-12 flex flex-col gap-3
@@ -333,23 +430,31 @@ export default function Footer() {
         >
 
 
+
           <p>
-            © 2026 Youyang Intelligent Control.
-            All rights reserved.
+
+            {t("copyright")}
+
           </p>
+
 
 
 
           <div className="flex gap-5">
 
 
-            <Link href="/privacy-policy">
-              Privacy Policy
+            <Link href={`/${locale}/privacy-policy`}>
+
+              {t("privacy")}
+
             </Link>
 
 
-            <Link href="/terms">
-              Terms
+
+            <Link href={`/${locale}/terms`}>
+
+              {t("terms")}
+
             </Link>
 
 
@@ -357,6 +462,7 @@ export default function Footer() {
 
 
         </div>
+
 
 
 

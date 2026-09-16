@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
 import Container from "@/components/ui/Container";
-
 import Button from "@/components/ui/Button";
+
+import { getTranslations } from "next-intl/server";
 
 
 
@@ -16,26 +17,20 @@ export const metadata: Metadata = {
 
 };
 
+
+
 const advantages = [
   {
-    title: "360° Panoramic Perception",
-    description:
-      "Provides wide-area panoramic monitoring through advanced imaging technology, reducing blind spots and improving overall situational awareness.",
+    key: "one",
   },
   {
-    title: "Front-End AI Intelligence",
-    description:
-      "Target detection, classification, and intelligent analysis are completed at the device edge, reducing latency and improving response efficiency.",
+    key: "two",
   },
   {
-    title: "Integrated Intelligent System",
-    description:
-      "Combines panoramic imaging, AI recognition, and monitoring capabilities into one integrated intelligent sensing solution.",
+    key: "three",
   },
   {
-    title: "Wide-Area Situation Awareness",
-    description:
-      "Designed for complex environments requiring continuous perception, multi-target detection, and intelligent monitoring.",
+    key: "four",
   },
 ];
 
@@ -43,19 +38,19 @@ const advantages = [
 
 const applications = [
   {
-    title: "Street Monitoring",
+    key: "street",
     image: "/solutions/street.png",
   },
   {
-    title: "Airport Security",
+    key: "airport",
     image: "/solutions/airport.png",
   },
   {
-    title: "Port Monitoring",
+    key: "port",
     image: "/solutions/port.png",
   },
   {
-    title: "Large Area Protection",
+    key: "largeArea",
     image: "/solutions/mine.jpg",
   },
 ];
@@ -63,7 +58,12 @@ const applications = [
 
 
 
-export default function SentinelPage() {
+
+export default async function SentinelPage() {
+
+
+  const t = await getTranslations("products.sentinel");
+
 
 
   return (
@@ -83,25 +83,29 @@ export default function SentinelPage() {
 
 
 
-            {/* Text */}
-
             <div>
 
 
               <p className="text-sm uppercase tracking-[0.3em] text-tech-cyan">
-                Intelligent Surveillance System
+
+                {t("hero.label")}
+
               </p>
 
 
 
               <h1 className="mt-5 text-5xl font-bold">
+
                 360 Sentinel
+
               </h1>
 
 
 
               <p className="mt-3 text-lg text-slate-300">
+
                 YYZK-Sentry-6L-V1.0
+
               </p>
 
 
@@ -109,10 +113,7 @@ export default function SentinelPage() {
 
               <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-300">
 
-                An all-scenario intelligent surveillance camera
-                integrating compound-eye imaging technology,
-                precision optical design, and AI recognition
-                algorithms for wide-area intelligent perception.
+                {t("hero.description")}
 
               </p>
 
@@ -122,7 +123,9 @@ export default function SentinelPage() {
               <div className="mt-8">
 
                 <Button href="/contact">
-                  Request Demo →
+
+                  {t("hero.button")}
+
                 </Button>
 
               </div>
@@ -134,8 +137,6 @@ export default function SentinelPage() {
 
 
 
-
-            {/* Product Image */}
 
             <div className="flex justify-center">
 
@@ -181,21 +182,16 @@ export default function SentinelPage() {
 
 
           <h2 className="text-3xl font-bold text-navy">
-            Product Overview
+
+            {t("overview.title")}
+
           </h2>
 
 
 
           <p className="mt-6 max-w-4xl text-lg leading-relaxed text-text-muted">
 
-
-            360 Sentinel is a self-developed intelligent
-            surveillance system designed for wide-area
-            perception scenarios. By combining panoramic
-            imaging, AI recognition, and intelligent sensing
-            technologies, it provides comprehensive visual
-            awareness and real-time monitoring capabilities.
-
+            {t("overview.description")}
 
           </p>
 
@@ -224,7 +220,9 @@ export default function SentinelPage() {
 
 
           <h2 className="text-3xl font-bold text-navy">
-            Core Advantages
+
+            {t("advantages.title")}
+
           </h2>
 
 
@@ -238,14 +236,14 @@ export default function SentinelPage() {
 
 
               <div
-                key={item.title}
+                key={item.key}
                 className="rounded-2xl bg-white p-8 shadow-sm"
               >
 
 
                 <h3 className="text-xl font-bold text-navy">
 
-                  {item.title}
+                  {t(`advantages.items.${item.key}.title`)}
 
                 </h3>
 
@@ -253,7 +251,7 @@ export default function SentinelPage() {
 
                 <p className="mt-4 text-text-muted">
 
-                  {item.description}
+                  {t(`advantages.items.${item.key}.description`)}
 
                 </p>
 
@@ -274,6 +272,7 @@ export default function SentinelPage() {
 
 
       </section>
+
             {/* Technical Specifications */}
 
       <section className="py-20">
@@ -283,7 +282,7 @@ export default function SentinelPage() {
 
           <h2 className="text-3xl font-bold text-navy">
 
-            Technical Specifications
+            {t("specifications.title")}
 
           </h2>
 
@@ -294,12 +293,12 @@ export default function SentinelPage() {
             <div className="grid grid-cols-2 bg-navy p-5 text-white">
 
               <p>
-                Parameter
+                {t("specifications.parameter")}
               </p>
 
 
               <p>
-                Specification
+                {t("specifications.value")}
               </p>
 
             </div>
@@ -308,42 +307,38 @@ export default function SentinelPage() {
 
 
             {[
-              {
-                parameter: "Product Model",
-                value: "YYZK-Sentry-6L-V1.0",
-              },
-              {
-                parameter: "Imaging Technology",
-                value: "Compound-eye panoramic imaging technology",
-              },
-              {
-                parameter: "AI Capability",
-                value: "Edge AI recognition and intelligent analysis",
-              },
-              {
-                parameter: "Application",
-                value: "Wide-area intelligent monitoring scenarios",
-              },
-            ].map((item) => (
+  {
+    parameter: "model",
+    value: "YYZK-Sentry-6L-V1.0",
+  },
+  {
+    parameter: "imaging",
+    value: t("specifications.values.imaging"),
+  },
+  {
+    parameter: "ai",
+    value: t("specifications.values.ai"),
+  },
+  {
+    parameter: "application",
+    value: t("specifications.values.application"),
+  },
+].map((item) => (
+  <div
+    key={item.parameter}
+    className="grid grid-cols-2 border-t p-5 text-sm"
+  >
 
-              <div
-                key={item.parameter}
-                className="grid grid-cols-2 border-t p-5 text-sm"
-              >
+    <p className="text-text-muted">
+      {t(`specifications.items.${item.parameter}`)}
+    </p>
 
-                <p className="text-text-muted">
-                  {item.parameter}
-                </p>
+    <p className="font-medium text-navy">
+      {item.value}
+    </p>
 
-
-                <p className="font-medium text-navy">
-                  {item.value}
-                </p>
-
-
-              </div>
-
-            ))}
+  </div>
+))}
 
 
 
@@ -373,7 +368,7 @@ export default function SentinelPage() {
 
           <h2 className="text-3xl font-bold text-navy">
 
-            Traditional Solutions vs 360 Sentinel
+            {t("comparison.title")}
 
           </h2>
 
@@ -389,12 +384,16 @@ export default function SentinelPage() {
 
 
               <p>
-                Traditional Solutions
+
+                {t("comparison.traditional")}
+
               </p>
 
 
               <p>
-                360 Sentinel
+
+                {t("comparison.product")}
+
               </p>
 
 
@@ -407,35 +406,26 @@ export default function SentinelPage() {
 
             {[
               {
-                traditional:
-                  "Limited field of view with monitoring blind spots",
-                sentinel:
-                  "360° panoramic coverage with wide-area monitoring",
+                key: "one",
               },
               {
-                traditional:
-                  "Backend dependent analysis with higher delay",
-                sentinel:
-                  "Front-end AI computing with real-time response",
+                key: "two",
               },
               {
-                traditional:
-                  "Requires multiple devices for large areas",
-                sentinel:
-                  "Integrated intelligent sensing solution",
+                key: "three",
               },
             ].map((item) => (
 
 
               <div
-                key={item.traditional}
+                key={item.key}
                 className="grid grid-cols-2 border-t p-5 text-sm"
               >
 
 
                 <p className="text-text-muted">
 
-                  {item.traditional}
+                  {t(`comparison.items.${item.key}.traditional`)}
 
                 </p>
 
@@ -443,7 +433,7 @@ export default function SentinelPage() {
 
                 <p className="font-medium text-navy">
 
-                  {item.sentinel}
+                  {t(`comparison.items.${item.key}.sentinel`)}
 
                 </p>
 
@@ -481,7 +471,7 @@ export default function SentinelPage() {
 
           <h2 className="text-3xl font-bold text-navy">
 
-            Application Scenarios
+            {t("applications.title")}
 
           </h2>
 
@@ -498,7 +488,7 @@ export default function SentinelPage() {
 
 
               <div
-                key={item.title}
+                key={item.key}
                 className="overflow-hidden rounded-2xl bg-white shadow-sm"
               >
 
@@ -506,7 +496,7 @@ export default function SentinelPage() {
 
                 <img
                   src={item.image}
-                  alt={item.title}
+                  alt={t(`applications.items.${item.key}`)}
                   className="h-56 w-full object-cover"
                 />
 
@@ -517,14 +507,14 @@ export default function SentinelPage() {
 
                   <h3 className="text-xl font-bold text-navy">
 
-                    {item.title}
+                    {t(`applications.items.${item.key}`)}
 
                   </h3>
 
 
                   <p className="mt-3 text-text-muted">
 
-                    Intelligent sensing solutions for complex monitoring environments.
+                    {t("applications.description")}
 
                   </p>
 
@@ -572,7 +562,7 @@ export default function SentinelPage() {
 
             <h2 className="text-3xl font-bold">
 
-              Build Intelligent Wide-Area Awareness
+              {t("cta.title")}
 
             </h2>
 
@@ -580,8 +570,7 @@ export default function SentinelPage() {
 
             <p className="mt-4 text-slate-300">
 
-              Contact Youyang Intelligent Control for
-              intelligent sensing solutions.
+              {t("cta.description")}
 
             </p>
 
@@ -593,7 +582,7 @@ export default function SentinelPage() {
 
               <Button href="/contact">
 
-                Contact Us →
+                {t("cta.button")}
 
               </Button>
 

@@ -1,0 +1,668 @@
+{
+  "nav": {
+    "home": "Home",
+    "company": "Company",
+    "products": "Products",
+    "solutions": "Solutions",
+    "resources": "Resources",
+    "contact": "Contact"
+  },
+
+  "common": {
+    "learnMore": "Learn More",
+    "viewProducts": "View Products",
+    "contactUs": "Contact Us"
+  },
+
+  "hero": {
+    "label": "Intelligent Sensing Technology",
+    "title": "Innovating Intelligent Perception Through AI and Optoelectronic Technology",
+    "description1": "Youyang Intelligent Control focuses on the development of intelligent sensing systems by integrating advanced imaging technology, AI recognition algorithms, and precision engineering.",
+    "description2": "Our technologies enable wider awareness, intelligent analysis, and reliable perception capabilities for complex environments and critical applications."
+  },
+
+  "technology": {
+    "label": "Core Technology",
+    "title": "Engineering Intelligent Perception Systems",
+    "description": "Youyang combines optical innovation, AI computing, and intelligent sensing technologies to create next-generation wide-area perception solutions.",
+    "capabilities": "Core Technology Capabilities",
+
+    "items": {
+      "one": {
+        "title": "Compound-Eye Imaging",
+        "description": "Multi-camera optical architecture inspired by compound-eye vision enables wide-area panoramic perception with reduced blind spots and improved environmental awareness."
+      },
+
+      "two": {
+        "title": "AI Recognition Algorithms",
+        "description": "Advanced AI algorithms analyze visual information in real time, supporting intelligent detection, classification, recognition, and situation awareness."
+      },
+
+      "three": {
+        "title": "3D Image Stitching",
+        "description": "High-precision image fusion technology combines multiple camera views into seamless panoramic visual information for large-scale monitoring."
+      },
+
+      "four": {
+        "title": "Digital Twin Modeling",
+        "description": "Digital representation technologies support intelligent monitoring, environment analysis, and data-driven decision making."
+      }
+    },
+
+    "architecture": {
+      "label": "Intelligent Architecture",
+      "title": "From Perception To Intelligence",
+      "description": "Integrating advanced sensing hardware, edge AI computing, and intelligent analysis platforms to support complex application scenarios."
+    }
+  },
+
+
+  "company": {
+
+    "hero": {
+      "label": "About Youyang",
+      "title": "Intelligent Vision Systems For Wide-Area Intelligence",
+      "description": "Youyang Intelligent Control develops advanced panoramic sensing and intelligent surveillance solutions powered by optical innovation, AI computing, and intelligent perception technologies."
+    },
+
+    "overview": {
+      "title": "Company Overview",
+      "description": "Established in 2018, Youyang Intelligent Control focuses on developing intelligent visual sensing systems for complex monitoring environments. Through the integration of panoramic imaging, AI recognition, and intelligent sensing technologies, the company provides advanced solutions for wide-area perception applications."
+    },
+
+    "established": "Established",
+    "year": "2018",
+    "establishedDescription": "Building intelligent perception systems for next-generation visual applications.",
+
+    "mission": {
+      "title": "Mission",
+      "description": "Technology leads development, and innovation creates excellence. We leverage advanced technologies and continuous innovation to develop intelligent sensing solutions that create value for industries and society."
+    },
+
+    "vision": {
+      "title": "Vision",
+      "description": "Become a high-quality high-tech brand enterprise. We aim to build a trusted technology brand through advanced innovation, reliable products, and commitment to quality."
+    },
+
+    "values": {
+      "title": "Values",
+      "description": "Global Perspective. We embrace a worldwide vision, continuously exploring technological progress and creating intelligent solutions for global applications."
+    },
+
+    "capabilityTitle": "Core Technology Capability",
+
+    "capabilities": {
+      "one": {
+        "title": "Compound-Eye Imaging",
+        "description": "Advanced optical architecture enabling panoramic visual perception and wide-area monitoring."
+      },
+
+      "two": {
+        "title": "AI Recognition Technology",
+        "description": "Intelligent algorithms provide real-time recognition and situation awareness capabilities."
+      },
+
+      "three": {
+        "title": "Intelligent Sensing Systems",
+        "description": "Integrated sensing solutions combining imaging, AI computing, and intelligent perception."
+      }
+    },
+
+    "cta": {
+      "title": "Partner With Youyang Intelligent Control",
+      "description": "Explore intelligent sensing solutions designed for future applications.",
+      "button": "Contact Us →"
+    }
+
+  },
+
+
+  "products": {
+
+    "label": "Intelligent Sensing Products",
+
+    "title": "Advanced Panoramic Intelligence Systems",
+
+    "description": "Youyang intelligent sensing platforms combine compound-eye imaging technology, edge AI computing, and panoramic perception for complex environments.",
+
+    "explore": "Explore Product",
+
+    "sentinel": {
+
+      "name": "360 Sentinel",
+
+      "description": "All-scenario intelligent surveillance camera based on compound-eye imaging technology.",
+
+      "hero": {
+        "label": "Panoramic Intelligent Surveillance System",
+        "description": "All-scenario intelligent surveillance system based on compound-eye imaging technology, delivering panoramic perception and intelligent recognition.",
+        "button": "Request Demo"
+      },
+
+      "overview": {
+        "title": "Product Overview",
+        "description": "360 Sentinel integrates advanced panoramic imaging, AI recognition algorithms, and intelligent sensing technology to provide wide-area perception capabilities for complex monitoring environments."
+      },
+            "advantages": {
+
+        "title": "Key Advantages",
+
+        "items": {
+
+          "one": {
+            "title": "360° Panoramic Perception",
+            "description": "Provides wide-area visual coverage with reduced blind spots through advanced optical architecture."
+          },
+
+          "two": {
+            "title": "AI Intelligent Recognition",
+            "description": "Supports intelligent detection, classification, and real-time analysis through AI algorithms."
+          },
+
+          "three": {
+            "title": "High Efficiency Monitoring",
+            "description": "Improves monitoring efficiency with intelligent perception and automated analysis."
+          },
+
+          "four": {
+            "title": "Flexible Applications",
+            "description": "Designed for various public and industrial environments requiring wide-area awareness."
+          }
+
+        }
+
+      },
+
+
+      "specifications": {
+
+        "title": "Technical Specifications",
+
+        "parameter": "Parameter",
+
+        "value": "Details",
+
+        "items": {
+
+          "model": "Model",
+
+          "imaging": "Imaging Technology",
+
+          "ai": "AI Capability",
+
+          "application": "Application"
+
+        }
+
+      },
+
+
+      "comparison": {
+
+        "title": "Traditional Monitoring vs 360 Sentinel",
+
+        "traditional": "Traditional System",
+
+        "product": "360 Sentinel",
+
+        "items": {
+
+          "one": {
+            "traditional": "Limited viewing angle",
+            "sentinel": "Wide-area panoramic perception"
+          },
+
+          "two": {
+            "traditional": "Manual monitoring dependency",
+            "sentinel": "AI-powered intelligent analysis"
+          },
+
+          "three": {
+            "traditional": "Multiple devices required",
+            "sentinel": "Integrated perception system"
+          }
+
+        }
+
+      },
+
+
+      "applications": {
+
+        "title": "Application Scenarios",
+
+        "description": "Supporting intelligent monitoring and perception requirements.",
+
+        "items": {
+
+          "street": "Urban Public Spaces",
+
+          "airport": "Transportation Hubs",
+
+          "port": "Critical Infrastructure",
+
+          "largeArea": "Large-area Monitoring"
+
+        }
+
+      },
+
+
+      "cta": {
+
+        "title": "Partner With Youyang Intelligent Control",
+
+        "description": "Explore intelligent sensing solutions designed for future applications.",
+
+        "button": "Contact Us"
+
+      }
+
+    },
+
+
+    "dome": {
+
+      "name": "Dome Watch",
+
+      "description": "Panoramic monitoring camera designed for intelligent scene awareness with AI recognition.",
+
+
+      "hero": {
+
+        "label": "Intelligent Panoramic Monitoring System",
+
+        "description": "Panoramic monitoring camera designed for intelligent scene awareness with edge AI recognition capabilities.",
+
+        "button": "Request Demo"
+
+      },
+
+
+      "overview": {
+
+        "title": "Product Overview",
+
+        "description": "Dome Watch combines panoramic imaging technology and AI computing to provide intelligent monitoring for complex environments."
+
+      },
+
+
+      "advantages": {
+
+        "title": "Key Advantages",
+
+        "items": {
+
+          "one": {
+
+            "title": "Panoramic Monitoring",
+
+            "description": "Provides comprehensive visual awareness with panoramic imaging technology."
+
+          },
+
+          "two": {
+
+            "title": "AI Scene Understanding",
+
+            "description": "Analyzes visual information through intelligent recognition algorithms."
+
+          },
+
+          "three": {
+
+            "title": "Reliable Performance",
+
+            "description": "Designed for continuous operation in demanding environments."
+
+          },
+
+          "four": {
+
+            "title": "Smart Integration",
+
+            "description": "Supports intelligent sensing and monitoring platforms."
+
+          }
+
+        }
+
+      },
+
+
+      "specifications": {
+
+        "title": "Technical Specifications",
+
+        "parameter": "Parameter",
+
+        "values": {
+  "imaging": "Panoramic imaging technology",
+  "ai": "Edge AI recognition and intelligent analysis",
+  "application": "Complex monitoring and intelligent sensing scenarios"
+}
+      },
+
+
+      "comparison": {
+
+        "title": "Traditional Monitoring vs Dome Watch",
+
+        "traditional": "Traditional System",
+
+        "product": "Dome Watch",
+
+        "items": {
+
+          "one": {
+
+            "traditional": "Limited monitoring range",
+
+            "dome": "Panoramic coverage"
+
+          },
+
+          "two": {
+
+            "traditional": "Basic video recording",
+
+            "dome": "AI intelligent analysis"
+
+          },
+
+          "three": {
+
+            "traditional": "Higher deployment complexity",
+
+            "dome": "Integrated intelligent solution"
+
+          },
+
+          "four": {
+
+            "traditional": "Limited awareness",
+
+            "dome": "Enhanced scene understanding"
+
+          }
+
+        }
+
+      },
+
+
+      "applications": {
+
+        "title": "Application Scenarios",
+
+        "description": "Supporting intelligent monitoring requirements.",
+
+        "items": {
+
+          "security": "Security Monitoring",
+
+          "city": "Smart City Applications",
+
+          "surveillance": "Public Surveillance",
+
+          "industrial": "Industrial Areas"
+
+        }
+
+      },
+
+
+      "cta": {
+
+        "title": "Discover Dome Watch Solutions",
+
+        "description": "Build smarter monitoring systems with intelligent perception technology.",
+
+        "button": "Contact Us"
+
+      }
+
+    },
+        "guardian": {
+
+      "name": "Wide-area Guardian",
+
+      "description": "Wide-area perception camera integrating panoramic imaging, AI recognition, and intelligent sensing technology.",
+
+
+      "hero": {
+
+        "label": "Wide-area Intelligent Perception System",
+
+        "description": "Wide-area situation awareness camera integrating panoramic imaging, AI recognition, and intelligent perception technology.",
+
+        "button": "Request Demo"
+
+      },
+
+
+      "overview": {
+
+        "title": "Product Overview",
+
+        "description": "Wide-area Guardian provides large-scale intelligent perception through panoramic imaging and AI-based analysis."
+
+      },
+
+
+      "advantages": {
+
+        "title": "Key Advantages",
+
+        "items": {
+
+          "one": {
+
+            "title": "Large-area Coverage",
+
+            "description": "Designed for monitoring extensive environments with wide visual awareness."
+
+          },
+
+          "two": {
+
+            "title": "Intelligent Analysis",
+
+            "description": "Uses AI recognition technology for efficient information processing."
+
+          },
+
+          "three": {
+
+            "title": "Continuous Awareness",
+
+            "description": "Supports reliable perception for complex scenarios."
+
+          },
+
+          "four": {
+
+            "title": "Scalable Applications",
+
+            "description": "Suitable for large-scale intelligent monitoring projects."
+
+          }
+
+        }
+
+      },
+
+
+      "specifications": {
+
+        "title": "Technical Specifications",
+
+        "parameter": "Parameter",
+
+        "value": "Details",
+
+        "items": {
+
+          "model": "Model",
+
+          "imaging": "Imaging Technology",
+
+          "ai": "AI Capability",
+
+          "application": "Application"
+
+        }
+
+      },
+
+
+      "comparison": {
+
+        "title": "Traditional Monitoring vs Wide-area Guardian",
+
+        "traditional": "Traditional System",
+
+        "product": "Wide-area Guardian",
+
+        "items": {
+
+          "one": {
+
+            "traditional": "Small monitoring range",
+
+            "guardian": "Large-area perception"
+
+          },
+
+          "two": {
+
+            "traditional": "Limited analysis",
+
+            "guardian": "AI intelligent understanding"
+
+          },
+
+          "three": {
+
+            "traditional": "Multiple systems needed",
+
+            "guardian": "Integrated solution"
+
+          },
+
+          "four": {
+
+            "traditional": "Limited scalability",
+
+            "guardian": "Flexible deployment"
+
+          }
+
+        }
+
+      },
+
+
+      "applications": {
+
+        "title": "Application Scenarios",
+
+        "description": "Supporting large-scale intelligent perception needs.",
+
+        "items": {
+
+          "city": "Smart City",
+
+          "infrastructure": "Critical Infrastructure",
+
+          "transportation": "Transportation Systems",
+
+          "safety": "Public Safety"
+
+        }
+
+      },
+
+
+      "cta": {
+
+        "title": "Partner With Youyang Intelligent Control",
+
+        "description": "Explore advanced wide-area perception solutions.",
+
+        "button": "Contact Us"
+
+      }
+
+    }
+
+  },
+
+
+  "footer": {
+
+    "description": "AI-powered panoramic sensing and intelligent surveillance solutions for wide-area perception.",
+
+    "follow": "Follow Us",
+
+
+    "company": {
+
+      "title": "Company",
+
+      "about": "About",
+
+      "technology": "Technology",
+
+      "rd": "R&D Capability",
+
+      "partners": "Partners"
+
+    },
+
+
+    "products": {
+
+      "title": "Products",
+
+      "sentinel": "360 Sentinel",
+
+      "dome": "Dome Watch",
+
+      "guardian": "Wide-area Guardian"
+
+    },
+
+
+    "solutions": {
+
+      "title": "Solutions",
+
+      "urban": "Urban Public Spaces",
+
+      "transportation": "Transportation Hubs",
+
+      "campuses": "Campuses",
+
+      "healthcare": "Healthcare",
+
+      "security": "High-Security",
+
+      "industrial": "Industrial"
+
+    },
+
+
+    "contactTitle": "Contact",
+
+
+    "copyright": "© 2026 Youyang Intelligent Control. All rights reserved.",
+
+    "privacy": "Privacy Policy",
+
+    "terms": "Terms"
+
+  }
+
+}

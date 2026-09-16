@@ -1,9 +1,21 @@
+import AuthProvider from "@/components/providers/SessionProvider";
+
+
 export default function AdminLayout({
-children,
+children
 }:{
-children:React.ReactNode;
+children:React.ReactNode
 }){
 
-return children;
+
+return (
+
+<AuthProvider>
+
+{children}
+
+</AuthProvider>
+
+);
 
 }

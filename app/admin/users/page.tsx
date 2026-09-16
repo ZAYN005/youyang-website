@@ -1,26 +1,67 @@
 "use client";
 
 
-import {useEffect,useState} from "react";
+import { useEffect, useState } from "react";
+
+import { useSession } from "next-auth/react";
+
+import { useRouter } from "next/navigation";
 
 
 
 export default function UsersPage(){
 
 
+
+const { data: session, status } = useSession();
+
+const router = useRouter();
+
+
+
+if(status === "loading"){
+
+return (
+
+<p className="text-white p-10">
+
+Loading...
+
+</p>
+
+);
+
+}
+
+
+
+if(session?.user?.role !== "ADMIN"){
+
+router.push("/admin/dashboard");
+
+return null;
+
+}
+
+
+
+
+
 const [users,setUsers]=useState<any[]>([]);
+
 
 
 const [form,setForm]=useState({
 
 name:"",
+
 email:"",
+
 password:"",
-role:"SALES"
+
+role:"MANAGER"
 
 });
-
-
 
 
 async function load(){
@@ -238,13 +279,13 @@ role:e.target.value
 
 >
 
-<option>ADMIN</option>
+<option value="ADMIN">
+ADMIN
+</option>
 
-<option>MANAGER</option>
-
-<option>SALES</option>
-
-<option>VIEWER</option>
+<option value="MANAGER">
+MANAGER
+</option>
 
 
 </select>

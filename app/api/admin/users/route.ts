@@ -69,11 +69,8 @@ status:401
 
 
 export async function POST(
-
-request:Request
-
+  request: Request
 ){
-
 
 try{
 
@@ -83,19 +80,31 @@ await requireRole([
 ]);
 
 
-
 const body = await request.json();
+const allowedRoles = [
+  "ADMIN",
+  "MANAGER"
+];
 
+
+if(!allowedRoles.includes(body.role)){
+
+return NextResponse.json(
+{
+error:"Invalid role"
+},
+{
+status:400
+}
+);
+
+}
 
 
 const hashedPassword = await bcrypt.hash(
-
-body.password,
-
-10
-
+  body.password,
+  10
 );
-
 
 
 
@@ -103,26 +112,19 @@ const user = await prisma.admin.create({
 
 data:{
 
+name: body.name,
 
-name:body.name,
+email: body.email,
 
+password: hashedPassword,
 
-email:body.email,
-
-
-password:hashedPassword,
-
-
-role:body.role,
-
+role: body.role,
 
 status:"ACTIVE"
-
 
 }
 
 });
-
 
 
 
@@ -132,8 +134,7 @@ return NextResponse.json(user);
 }
 
 
-
-catch(error:any){
+catch(error){
 
 
 return NextResponse.json(
@@ -147,7 +148,5 @@ status:500
 
 
 }
-
-
 
 }

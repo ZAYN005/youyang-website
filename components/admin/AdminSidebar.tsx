@@ -33,7 +33,7 @@ link:"/admin/users"
 
 {
 name:"Settings",
-link:"#"
+link:"/admin/settings"
 }
 
 ];
